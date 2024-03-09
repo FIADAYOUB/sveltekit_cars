@@ -44,6 +44,8 @@ export default {
         'hero-bg': "url('$lib/images/hero-bg.png')"
       },
       fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        paytone: ["Paytone One", "sans-serif"],
         sans: [
           '-apple-system',
           'BlinkMacSystemFont',

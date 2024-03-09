@@ -40,6 +40,9 @@ export default {
           '950': '#411c09'
         }
       },
+      backgroundImage: {
+        'hero-bg': "url('$lib/images/hero-bg.png')"
+      },
       fontFamily: {
         sans: [
           '-apple-system',

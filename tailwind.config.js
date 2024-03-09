@@ -43,6 +43,9 @@ export default {
       backgroundImage: {
         'hero-bg': "url('$lib/images/hero-bg.png')"
       },
+      boxShadow: {
+        "4xl": "0 10px 20px 0 rgba(0,0,0,.1)"
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         paytone: ["Paytone One", "sans-serif"],
@@ -72,6 +75,16 @@ export default {
           'Liberation Mono',
           'monospace'
         ]
+      },
+      fontSize: {
+        'f1': ' 3rem',
+        'f2': '2.25rem',
+        'f3': '1.5rem',
+        'f4': '1.25rem',
+        'f5': ' 1rem',
+        'f6': '.875rem',
+        'f7': '.75rem',
+        'f8': '.5rem',
       },
       typography: (theme) => ({
         DEFAULT: {

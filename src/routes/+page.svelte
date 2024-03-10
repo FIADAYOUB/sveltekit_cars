@@ -1,5 +1,6 @@
 <script>
-  import BookCar from "$lib/components/sections/BookCar.svelte";
+  import Banner from "$lib/components/sections/Banner.svelte";
+import BookCar from "$lib/components/sections/BookCar.svelte";
   import Hero from "$lib/components/sections/Hero.svelte";
   import PickCar from "$lib/components/sections/PickCar.svelte";
   import Plan from "$lib/components/sections/Plan.svelte";
@@ -9,3 +10,4 @@
 <BookCar />
 <Plan />
 <PickCar />
+<Banner />

@@ -2,11 +2,7 @@
   import CarBox from "./CarBox.svelte";
   import { CAR_DATA } from "$lib/data/carData";
 
-  let colorBtn;
-
-  const coloringButton = (id) => {
-    return colorBtn === id ? "colored-button" : "";
-  };
+  let selectedCar = CAR_DATA[0];
 </script>
 
 <section class="pick-section">
@@ -22,48 +18,17 @@
       </div>
       <div class="pick-container__car-content">
         <div class="pick-box">
-          <button class={`${coloringButton("btn1")}`} on:click={() => {}}>
-            Audi A1 S-Line
-          </button>
-          <button
-            class={`${coloringButton("btn2")}`}
-            id="btn2"
-            on:click={() => {}}
-          >
-            VW Golf 6
-          </button>
-          <button
-            class={`${coloringButton("btn3")}`}
-            id="btn3"
-            on:click={() => {}}
-          >
-            Toyota Camry
-          </button>
-          <button
-            class={`${coloringButton("btn4")}`}
-            id="btn4"
-            on:click={() => {}}
-          >
-            BMW 320 ModernLine
-          </button>
-          <button
-            class={`${coloringButton("btn5")}`}
-            id="btn5"
-            on:click={() => {}}
-          >
-            Mercedes-Benz GLK
-          </button>
-          <button
-            class={`${coloringButton("btn6")}`}
-            id="btn6"
-            on:click={() => {}}
-          >
-            VW Passat CC
-          </button>
+          {#each CAR_DATA as car, index}
+            <button
+              class:selected={car.id === selectedCar.id}
+              on:click={() => (selectedCar = car)}
+            >
+              {car.name}
+            </button>
+          {/each}
         </div>
-
         <div class="box-cars">
-          <CarBox car={CAR_DATA[4]} />
+          <CarBox car={selectedCar} />
         </div>
       </div>
     </div>
@@ -74,7 +39,9 @@
   .pick-section {
     @apply py-40 px-0;
   }
-
+  .container {
+    @apply my-0 mx-auto max-w-[1200px] p-4;
+  }
   .pick-container {
     @apply flex flex-col;
   }
@@ -90,6 +57,9 @@
   }
   .pick-box button {
     @apply text-f5 text-nowrap border-none cursor-pointer p-4 bg-gray-100 transition-all duration-500 text-left hover:bg-magnum-400 hover:text-white;
+  }
+  .pick-box button.selected {
+    @apply bg-magnum-400 text-white;
   }
   .box-cars {
     @apply flex gap-8 justify-between;

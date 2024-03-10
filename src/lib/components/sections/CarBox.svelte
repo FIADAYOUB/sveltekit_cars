@@ -1,11 +1,9 @@
 <script>
   export let car;
-  console.log({ car });
 </script>
 
 <div class="pick-car">
-  <!-- {carLoad && <span class="loader"></span>} -->
-  <img src={car?.img} alt="car_img" />
+  <img src={car?.img} alt="car_img"/>
 </div>
 <div class="pick-description">
   <div class="pick-description__price">
@@ -47,7 +45,7 @@
       <span>{car?.fuel}</span>
     </div>
   </div>
-  <a class="cta-btn" href="#booking-section"> Reserve Now </a>
+  <a class="booking_link w-full bg-secondary-base" href="/booking"> Reserve Now </a>
 </div>
 
 <style lang="postcss">
@@ -61,12 +59,15 @@
     @apply w-96;
   }
   .pick-description__price {
-    @apply w-full bg-magnum-500 text-f4 flex items-center gap-6 text-white py-1 px-8 whitespace-nowrap;
+    @apply w-full bg-magnum-500 text-f4 flex items-center text-white justify-center py-2;
   }
   .pick-description__table {
     @apply grid grid-cols-[1fr] grid-rows-[auto] text-f5;
   }
   .pick-description__table__col {
     @apply grid grid-cols-[1fr,1fr] text-center grid-rows-[auto] py-2 px-2 border-b-[1px] border-gray-400;
+  }
+  .booking_link {
+    @apply w-full bg-magnum-500 text-f4 flex items-center justify-center gap-6 text-white;
   }
 </style>

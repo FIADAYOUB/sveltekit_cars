@@ -7,6 +7,7 @@ import Passat from "$lib/images/cars-big/passatcc.jpg";
 
 export const CAR_DATA = [
   {
+    id: 1,
     name: "VW Golf 6",
     price: "37",
     img: Golf6,
@@ -19,6 +20,7 @@ export const CAR_DATA = [
     fuel: "Diesel",
   },
   {
+    id: 2,
     name: "Audi A1 S-Line",
     price: "45",
     img: AudiA1,
@@ -31,6 +33,7 @@ export const CAR_DATA = [
     fuel: "Gasoline",
   },
   {
+    id: 3,
     name: "Toyota Camry",
     price: "30",
     img: Toyota,
@@ -43,6 +46,7 @@ export const CAR_DATA = [
     fuel: "Hybrid",
   },
   {
+    id: 4,
     name: "BMW 320 ModernLine",
     price: "35",
     img: Bmw320,
@@ -55,6 +59,7 @@ export const CAR_DATA = [
     fuel: "Diesel",
   },
   {
+    id: 5,
     name: "Mercedes-Benz GLK",
     price: "50",
     img: Benz,
@@ -67,6 +72,7 @@ export const CAR_DATA = [
     fuel: "Diesel",
   },
   {
+    id: 6,
     name: "VW Passat CC",
     price: "25",
     img: Passat,

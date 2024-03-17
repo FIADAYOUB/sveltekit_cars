@@ -44,7 +44,8 @@ export default {
         'hero-bg': "url('$lib/images/hero-bg.png')"
       },
       boxShadow: {
-        "4xl": "0 10px 20px 0 rgba(0,0,0,.1)"
+        "4xl": "0 10px 20px 0 rgba(0,0,0,.1)",
+        "3xl": "0 20px 40px 0 rgb(0 0 0 / 8%)"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

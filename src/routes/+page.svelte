@@ -1,11 +1,12 @@
 <script>
   import Banner from "$lib/components/sections/Banner.svelte";
-import BookCar from "$lib/components/sections/BookCar.svelte";
+  import BookCar from "$lib/components/sections/BookCar.svelte";
   import ChooseUs from "$lib/components/sections/ChooseUs.svelte";
   import Hero from "$lib/components/sections/Hero.svelte";
   import PickCar from "$lib/components/sections/PickCar.svelte";
   import Plan from "$lib/components/sections/Plan.svelte";
   import Testimonials from "$lib/components/sections/Testimonials.svelte";
+  import Faq from "$lib/components/sections/Faq.svelte";
 </script>
 
 <Hero />
@@ -15,3 +16,4 @@ import BookCar from "$lib/components/sections/BookCar.svelte";
 <Banner />
 <ChooseUs />
 <Testimonials />
+<Faq />

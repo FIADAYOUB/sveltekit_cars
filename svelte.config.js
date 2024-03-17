@@ -4,8 +4,13 @@ import {vitePreprocess} from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config}*/
 const config = {
   kit: {
-    adapter: adapter()
+    adapter: adapter({
+      out: "dist"
+    }),
+    alias: {
+      $components: "src/components"
+    }
   },
-  preprocess: sequence([vitePreprocess(), preprocessMeltUI()])
+  preprocess: sequence([vitePreprocess(), preprocessMeltUI()]),
 };
 export default config;

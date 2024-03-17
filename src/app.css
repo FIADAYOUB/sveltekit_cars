@@ -56,10 +56,6 @@
     width: 5px;
   }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #aaa;
-    border-radius: 6px;
-  }
 
   /* Hide the scrollbar by default */
   ::-webkit-scrollbar-thumb,

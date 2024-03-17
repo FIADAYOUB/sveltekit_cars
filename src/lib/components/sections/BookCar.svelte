@@ -1,6 +1,7 @@
 <script>
   import Select from "$lib/components/melt/Select.svelte";
   import DatePicker from "$lib/components/melt/DatePicker.svelte";
+  import BookingModal from "../shared/BookingModal.svelte";
 
 
   const carTypes = {
@@ -81,7 +82,9 @@
             </div>
           </div>
           <div class="flex items-end">
-            <button type="button" class="book-button__box"> Search </button>
+            <BookingModal >
+              <span>Search</span>
+            </BookingModal>
           </div>
         </form>
       </div>
@@ -101,8 +104,5 @@
   }
   .box-form {
     @apply grid gap-8 grid-cols-[1fr] sm:grid-cols-[1fr,1fr] lg:grid-cols-[1fr,1fr,1fr] grid-rows-[auto,auto,auto]
-  }
-  .book-button__box {
-    @apply text-white bg-magnum-500 hover:bg-magnum-400 shadow font-semibold w-full h-10 flex items-center justify-center
   }
 </style>

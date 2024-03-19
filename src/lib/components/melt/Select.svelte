@@ -23,7 +23,7 @@
     <slot />
   </label>
   <button
-    class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2 text-magnum-700 shadow transition-opacity hover:opacity-90"
+    class="flex h-10 min-w-[220px] items-center justify-between rounded-lg bg-white px-3 py-2 text-magnum-700 shadow transition-opacity hover:opacity-90 dark:bg-dark-lighten5"
     use:melt={$trigger}
     on:m-keydown={(e) => {
       e.preventDefault(); // Cancel default builder behabiour

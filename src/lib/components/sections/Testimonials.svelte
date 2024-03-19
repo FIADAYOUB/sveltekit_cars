@@ -3,7 +3,7 @@
   import Ron from "$lib/images/Ron.jpg";
 
 </script>
-<section class="testimonials-section bg-gray-100 py-10">
+<section class="testimonials-section bg-gray-100 py-10 dark:bg-dark-lighten1">
   <div class="container my-0 mx-auto max-w-[1200px] p-4">
     <div class="testimonials-content flex flex-col">
       <div class="testimonials-content__title flex flex-col my-0 mx-auto text-center max-w-[600px] mb-5">
@@ -65,7 +65,7 @@
 
 <style lang="postcss">
 .all-testimonials__box {
-  @apply bg-white shadow-3xl w-[540px] p-10 relative flex flex-col justify-between;
+  @apply bg-white shadow-3xl w-[540px] p-10 relative flex flex-col justify-between dark:bg-dark-darken1;
 }
 .all-testimonials__box__name {
   @apply flex justify-between;

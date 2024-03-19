@@ -5,7 +5,7 @@
   import box3 from "$lib/images/box3.png";
 
 </script>
-<section class="choose-section bg-white pt-2 pb-6 bg-cover bg-no-repeat bg-[url('$lib/images/bgChoose.png')]">
+<section class="choose-section bg-white pt-2 pb-6 bg-cover bg-no-repeat bg-[url('$lib/images/bgChoose.png')] dark:bg-dark-base">
   <div class="container my-0 mx-auto max-w-[1200px] p-4">
     <div class="choose-container flex flex-col">
       <img

@@ -28,7 +28,7 @@
 
 <section>
   <div class="w-full">
-    <label class="flex items-center gap-2 w-fit !text-black" use:melt={$label}>
+    <label class="flex items-center gap-2 w-fit " use:melt={$label}>
       <slot />
     </label>
     <div use:melt={$field}>
@@ -112,7 +112,7 @@
   }
 
   [data-melt-popover-content] {
-    @apply z-10 min-w-[320px] rounded-lg bg-white shadow-sm;
+    @apply z-10 min-w-[320px] rounded-lg bg-white shadow-sm dark:bg-dark-lighten5;
   }
 
   [data-melt-popover-trigger] {
@@ -120,7 +120,7 @@
   }
 
   [data-melt-datefield-label] {
-    @apply select-none font-medium text-magnum-800;
+    @apply select-none font-medium ;
   }
 
   [data-melt-datefield-label][data-invalid] {
@@ -128,7 +128,7 @@
   }
 
   [data-melt-datefield-field] {
-    @apply mt-0.5 flex w-full min-w-[160px] items-center rounded-lg bg-white p-2 text-magnum-800 shadow;
+    @apply mt-0.5 flex w-full min-w-[160px] items-center rounded-lg bg-white p-2 text-magnum-800 shadow dark:bg-dark-lighten5;
   }
 
   [data-melt-datefield-field][data-invalid] {
@@ -148,7 +148,7 @@
   }
 
   [data-melt-calendar] {
-    @apply w-full rounded-lg bg-white p-3 text-magnum-700 shadow-sm;
+    @apply w-full rounded-lg bg-white p-3 text-magnum-700 shadow-sm dark:bg-dark-lighten5 dark:text-white;
   }
 
   header {

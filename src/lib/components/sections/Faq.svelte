@@ -48,7 +48,7 @@
 
       <div
         class={cn(
-          "all-questions flex flex-col bg-white shadow-4xl w-full md:w-[700px]",
+          "all-questions flex flex-col bg-white dark:bg-dark-base shadow-4xl w-full md:w-[700px]",
           className
         )}
         {...$root}
@@ -63,8 +63,8 @@
                 use:melt={$trigger(id)}
                 class={cn(
                   "flex flex-1 cursor-pointer items-center justify-between ",
-                  "bg-white px-5 py-5 text-base font-medium leading-none",
-                  "text-black transition-colors hover:bg-neutral-100 focus:!ring-0",
+                  "bg-white dark:bg-dark-lighten1 px-5 py-5 text-base font-medium leading-none",
+                  "text-black dark:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-dark-lighten2 focus:!ring-0",
                   "focus-visible:text-magnum-800",
                   i !== 0 && "border-t border-t-neutral-300",
                   ""
@@ -77,7 +77,7 @@
               <div
                 class={cn(
                   "content",
-                  "overflow-hidden bg-neutral-100 text-sm text-neutral-600"
+                  "overflow-hidden bg-neutral-100 dark:bg-dark-lighten3 text-sm text-neutral-600 dark:text-white"
                 )}
                 use:melt={$content(id)}
                 transition:slide

@@ -65,7 +65,7 @@
     @apply grid grid-cols-[1fr] grid-rows-[auto] text-f5;
   }
   .pick-description__table__col {
-    @apply grid grid-cols-[1fr,1fr] text-center grid-rows-[auto] py-2 px-2 border-b-[1px] border-gray-400;
+    @apply grid grid-cols-[1fr,1fr] text-center grid-rows-[auto] py-2 px-2 border-b-[1px] border-gray-400 dark:bg-dark-lighten2;
   }
   .booking_link {
     @apply w-full bg-magnum-500 text-f4 flex items-center justify-center gap-6 text-white;

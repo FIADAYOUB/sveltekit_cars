@@ -38,7 +38,17 @@ export default {
           '800': '#1e3eb2',
           '900': '#193599',
           '950': '#152c7f'
-        }
+        },
+        'dark-base': '#423b56',
+        'dark-lighten5': '#c2b8d9',
+        'dark-lighten4': '#a79dbd',
+        'dark-lighten3': '#8c83a2',
+        'dark-lighten2': '#726a88',
+        'dark-lighten1': '#5a526e',
+        'dark-darken1': '#2b253f',
+        'dark-darken2': '#161129',
+        'dark-darken3': '#000015',
+        'dark-darken4': '#000000',
       },
       backgroundImage: {
         'hero-bg': "url('$lib/images/hero-bg.png')"

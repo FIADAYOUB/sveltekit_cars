@@ -29,7 +29,7 @@
 </button>
 
 <div class="" use:melt={$portalled}>
-  <!-- {#if $open} -->
+  {#if $open}
     <div
       use:melt={$overlay}
       class="fixed inset-0 z-50 bg-black/50"
@@ -319,7 +319,7 @@
         </div>
       </div>
     </div>
-  <!-- {/if} -->
+  {/if}
 </div>
 
 <style lang="postcss">

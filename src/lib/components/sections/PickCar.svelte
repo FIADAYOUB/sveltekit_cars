@@ -56,10 +56,10 @@
     @apply flex flex-col gap-3;
   }
   .pick-box button {
-    @apply text-f5 text-nowrap border-none cursor-pointer p-4 bg-gray-100 transition-all duration-500 text-left hover:bg-magnum-400 hover:text-white;
+    @apply text-f5 text-nowrap border-none cursor-pointer p-4 bg-gray-100 transition-all duration-500 text-left hover:bg-magnum-400 hover:text-white dark:bg-dark-lighten2;
   }
   .pick-box button.selected {
-    @apply bg-magnum-400 text-white;
+    @apply bg-magnum-400 text-white ;
   }
   .box-cars {
     @apply flex gap-8 justify-between;

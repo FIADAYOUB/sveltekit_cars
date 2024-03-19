@@ -100,7 +100,7 @@
     @apply mt-0 mb-20 mx-auto;
   }
   .book-content__box {
-    @apply bg-[url('$lib/images/book-bg.png')] bg-[50%] bg-no-repeat bg-cover flex flex-col h-auto py-8 p-2 md:px-12 w-full z-[4] shadow-4xl;
+    @apply bg-[url('$lib/images/book-bg.png')] bg-[50%] bg-no-repeat bg-cover flex flex-col h-auto py-8 p-2 md:px-12 w-full z-[4] shadow-4xl dark:bg-dark-lighten1;
   }
   .box-form {
     @apply grid gap-8 grid-cols-[1fr] sm:grid-cols-[1fr,1fr] lg:grid-cols-[1fr,1fr,1fr] grid-rows-[auto,auto,auto]

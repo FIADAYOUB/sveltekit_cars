@@ -3,9 +3,9 @@
   import Header from "./Header.svelte";
 </script>
 
-<div class="app dark">
+<div class="app">
 	<Header />
-	<main class="dark:bg-dark-base dark:text-white">
+	<main class="bg-white text-black dark:bg-dark-base dark:text-white transition-colors duration-300 ease-linear">
 		<slot />
 	</main>
 

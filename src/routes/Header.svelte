@@ -15,12 +15,16 @@
     forceVisible: true,
   });
   let darkMode = false;
+  function toggle() {
+    darkMode = !darkMode;
+	  window.document.body.classList.toggle('dark')
+  }
 </script>
 <div class="z-20 absolute top-3 right-3">
   <button
     type="button"
     use:melt={$trigger}
-    on:click={()=> darkMode = !darkMode}
+    on:click={toggle}
     class="w-10 h-10 rounded-full text-f4 overflow-hidden flex items-center justify-center bg-black/10"
   >
     {#if !darkMode}

@@ -13,6 +13,14 @@
   const dropLocation = {
     levelOne: ['Novi Sad', 'Belgrade', 'Nis', 'Kragujevac', 'Subotica']
   };
+
+  let bookCar = {
+    carType: "",
+    locationPickUp: "",
+    locationDropOf: "",
+    pickUp: "",
+    dropOf: ""
+  };
 </script>
 
 <section id="booking-section" class="book-section relative font-poppins">

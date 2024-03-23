@@ -2,7 +2,8 @@
   import Select from "$lib/components/melt/Select.svelte";
   import DatePicker from "$lib/components/melt/DatePicker.svelte";
   import BookingModal from "../shared/BookingModal.svelte";
-
+  import { enhance } from "$app/forms";
+  import { createDialog, melt } from "@melt-ui/svelte";
 
   const carTypes = {
     levelOne: ['Audi A1 S-Line', 'VW Golf 6', 'Toyota Camry', 'BMW 320 ModernLine', 'Mercedes-Benz GLK', 'VW Passat CC']
@@ -14,13 +15,23 @@
     levelOne: ['Novi Sad', 'Belgrade', 'Nis', 'Kragujevac', 'Subotica']
   };
 
-  let bookCar = {
+  let booking = {
     carType: "",
     locationPickUp: "",
     locationDropOf: "",
     pickUp: "",
     dropOf: ""
   };
+  let selectedCar;
+  let selectedDropLoc;
+  let selectedPickUpLoc;
+
+  const {
+    elements: { trigger, overlay, content, close, portalled },
+    states: { open },
+  } = createDialog({
+    forceVisible: true,
+  });
 </script>
 
 <section id="booking-section" class="book-section relative font-poppins">
@@ -28,11 +39,11 @@
     <div class="book-content">
       <div class="book-content__box">
         <h2>Book a car</h2>
-        <form class="box-form">
+        <form class="box-form" method="POST" use:enhance>
           <!-- carTypes -->
           <div class="box-form__car-type">
             <div class="flex items-center w-full gap-2">
-              <Select options={carTypes}>
+              <Select options={carTypes} bind:selectedValue={selectedCar} required={true}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"></path></svg>
                 <div class="font-poppins text-f6 font-semibold">
                   Select Your Car Type
@@ -44,7 +55,7 @@
           <!-- locations -->
           <div class="box-form__car-type">
             <div class="flex items-center w-full gap-2">
-              <Select options={locations}>
+              <Select options={locations}  bind:selectedValue={selectedPickUpLoc} required={true}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" fill="currentColor" stroke-width="0"></path></svg>
                 <div class="font-poppins text-f6 font-semibold">
                   Pick-up
@@ -56,7 +67,7 @@
           <!-- drop locations -->
           <div class="box-form__car-type">
             <div class="flex items-center w-full gap-2">
-              <Select options={dropLocation}>
+              <Select options={dropLocation}  bind:selectedValue={selectedDropLoc} required={true}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" fill="currentColor" stroke-width="0"></path></svg>
                 <div class="font-poppins text-f6 font-semibold">
                   Drop-of
@@ -90,9 +101,13 @@
             </div>
           </div>
           <div class="flex items-end">
-            <BookingModal >
-              <span>Search</span>
-            </BookingModal>
+            <button
+              use:melt={$trigger}
+              class="book-button__box text-white bg-magnum-500 hover:bg-magnum-400 shadow font-semibold w-full h-10 flex items-center justify-center"
+            >
+              Search
+            </button>
+            <BookingModal {booking} { open } {overlay} {content} {portalled } />
           </div>
         </form>
       </div>

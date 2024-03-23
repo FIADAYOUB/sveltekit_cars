@@ -2,6 +2,8 @@
   import { createSelect, melt } from '@melt-ui/svelte';
 
   export let options;
+  export let selectedValue;
+  export let required = false;
 
   const {
     elements: { trigger, menu, option, group, groupLabel, label },
@@ -9,17 +11,23 @@
     helpers: { isSelected },
   } = createSelect({
     forceVisible: true,
+    required,
     positioning: {
       placement: 'bottom',
       fitViewport: true,
       sameWidth: true,
     },
   });
+
+  $: selectedValue = $selected;
 </script>
 
 <div class="flex flex-col gap-1 w-full">
   <!-- svelte-ignore a11y-label-has-associated-control - $label contains the 'for' attribute -->
-  <label class="flex items-center gap-2 w-fit" use:melt={$label}>
+  <label
+    class="flex items-center gap-2 w-fit"
+    use:melt={$label}
+  >
     <slot />
   </label>
   <button

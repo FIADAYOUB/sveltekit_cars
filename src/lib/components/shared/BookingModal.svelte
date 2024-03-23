@@ -1,32 +1,21 @@
 <script>
-  import { createDialog, createCheckbox, melt } from "@melt-ui/svelte";
+  import { createCheckbox, melt } from "@melt-ui/svelte";
   /** Internal helpers */
   import { flyAndScale } from "$lib/components/melt/docs/utils/transition";
   import { fade } from "svelte/transition";
 
   export let booking;
+  export let overlay, content, portalled, open;
 
-  const {
-    elements: { trigger, overlay, content, close, portalled },
-    states: { open },
-  } = createDialog({
-    forceVisible: true,
-  });
   const {
     elements: { root, input },
     helpers: { isChecked, isIndeterminate },
   } = createCheckbox({
     defaultChecked: 'indeterminate',
   });
+
   let pickTime, dropTime, pickUp, dropOff, carType, imgUrl;
 </script>
-
-<button
-  use:melt={$trigger}
-  class="book-button__box text-white bg-magnum-500 hover:bg-magnum-400 shadow font-semibold w-full h-10 flex items-center justify-center"
->
-  <slot />
-</button>
 
 <div class="" use:melt={$portalled}>
   {#if $open}
